@@ -1,0 +1,35 @@
+<section class="screen screen--narrow" id="screen-doctor-entry">
+    <div class="panel">
+      <span class="eyebrow-pill">Healthcare Professional Access</span>
+      <div class="panel-head">
+        <h2>Doctor / Clinician Sign-in</h2>
+        <button class="icon-btn" onclick="speak('Doctor clinician sign in')">🔊 Listen</button>
+      </div>
+      <p class="panel-desc">This module is a frontend prototype for the clinical workspace. Choose a demo sign-in method to continue.</p>
+      <div class="notice-box">ⓘ No real medical council ID or hospital credentials are collected here.</div>
+
+      <div class="auth-grid">
+        <div class="auth-card" onclick="enterApp('screen-doctor-modules')">
+          <div class="auth-icon">🪪</div>
+          <h4>National Medical Register ID</h4>
+          <p>Sign in with your NMR / State Medical Council registration number.</p>
+          <button class="btn btn-primary btn-block">Verify NMR ID</button>
+        </div>
+        <div class="auth-card" onclick="enterApp('screen-doctor-modules')">
+          <div class="auth-icon">🏥</div>
+          <h4>Hospital Staff ID</h4>
+          <p>Sign in using your affiliated hospital or ASHA/MO staff credentials.</p>
+          <button class="btn btn-outline btn-block">Verify Staff ID</button>
+        </div>
+        <div class="auth-card auth-card--highlight" onclick="enterApp('screen-doctor-modules')">
+          <div class="auth-icon">🙋</div>
+          <h4>Demo Doctor Login</h4>
+          <p>Quickly explore the clinical workspace using a demo clinician profile.</p>
+          <button class="btn btn-primary btn-block">Use Demo Doctor</button>
+        </div>
+      </div>
+      <div class="panel-actions panel-actions--single">
+        <button class="btn btn-outline" onclick="showScreen('screen-role')">← Back</button>
+      </div>
+    </div>
+  </section>

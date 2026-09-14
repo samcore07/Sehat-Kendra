@@ -1,0 +1,43 @@
+<section class="screen screen--narrow" id="screen-prescription-view">
+    <div class="panel-head" style="margin-bottom:6px;">
+      <h2 style="margin:0;" id="rxViewPageTitle">Digital Prescription</h2>
+      <button class="icon-btn" id="rxViewBackBtn" onclick="showScreen('screen-prescription')">← Back to Prescription Center</button>
+    </div>
+
+    <div class="rx-lang-row" style="margin:14px 0 0;">
+      <span>🌐 Translate this prescription:</span>
+      <select id="rxDocLang" onchange="translatePrescriptionView(this.value)">
+        <option value="en">English</option>
+        <option value="hi">हिंदी (Hindi)</option>
+        <option value="bn">বাংলা (Bengali)</option>
+        <option value="mr">मराठी (Marathi)</option>
+        <option value="ta">தமிழ் (Tamil)</option>
+        <option value="or">ଓଡ଼ିଆ (Odia)</option>
+      </select>
+      <span style="font-size:11px;">(labels &amp; recognised medical terms only — demo)</span>
+    </div>
+
+    <div id="rxPrintArea">
+      <div class="rx-doc" id="rxDocCard"></div>
+    </div>
+
+    <div id="rxSummaryBox" class="notice-box hidden"></div>
+
+    <div id="rxFlashcardBox" class="hidden">
+      <h3 class="section-title" id="rxFlashcardsTitle">Flashcards</h3>
+      <div class="rx-flip-nav">
+        <span class="rx-flip-count" id="rxFlashCount">Card 1 of 1</span>
+        <div>
+          <button class="btn btn-outline" id="rxFlashPrevBtn" onclick="flashcardNav(-1)">← Prev</button>
+          <button class="btn btn-outline" id="rxFlashNextBtn" onclick="flashcardNav(1)">Next →</button>
+        </div>
+      </div>
+      <div class="rx-flip-card" id="rxFlipCard" onclick="this.classList.toggle('flipped')">
+        <div class="rx-flip-inner">
+          <div class="rx-flip-face front" id="rxFlipFront">Q</div>
+          <div class="rx-flip-face back" id="rxFlipBack">A</div>
+        </div>
+      </div>
+      <p class="muted" style="text-align:center;" id="rxFlashTapHint">Tap the card to flip it.</p>
+    </div>
+  </section>

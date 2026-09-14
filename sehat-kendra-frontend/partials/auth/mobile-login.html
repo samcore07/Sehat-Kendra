@@ -1,0 +1,20 @@
+<section class="screen screen--narrow" id="screen-mobile-login">
+    <div class="panel">
+      <span class="eyebrow-pill">Mobile Authentication</span>
+      <div class="panel-head">
+        <h2>Mobile Number Login</h2>
+        <button class="icon-btn" onclick="speak('Enter your 10 digit mobile number')">🔊 Listen</button>
+      </div>
+      <p class="panel-desc">Enter your registered 10-digit mobile number to receive a demo OTP.</p>
+      <div class="notice-box">ⓘ Demo only. No real SMS is sent.</div>
+      <div class="verify-box">
+        <div class="verify-box-head">
+          <h3>Demo Mobile Verification</h3>
+          <a href="#" onclick="showScreen('screen-auth'); return false;">Change Method</a>
+        </div>
+        <label for="mobileLoginNumber">Mobile Number</label>
+        <input type="text" id="mobileLoginNumber" inputmode="numeric" maxlength="10" value="9876543210" placeholder="Enter 10-digit mobile number" autocomplete="off">
+        <button type="button" class="btn btn-primary btn-block" onclick="requestMobileOtp()">Send Mobile OTP ▶</button>
+      </div>
+    </div>
+  </section>

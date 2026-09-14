@@ -1,0 +1,36 @@
+<section class="screen screen--wide" id="screen-ayush">
+    <div class="ayush-hero">
+      <span class="eyebrow-pill">AYUSH Integrated Wellness</span>
+      <h2>Traditional Wellness &amp; Lifestyle Guidance</h2>
+      <p>Explore classical Ayurvedic lifestyle practices — Dinacharya, sleep, movement, breathing, and nutrition guidance — curated alongside modern clinical care under the National Health Mission's AYUSH integration.</p>
+      <div class="ayush-hero-actions">
+        <button class="btn btn-primary" onclick="consultVaidyaFromAyush()">Consult an Ayurveda Vaidya →</button>
+        <button class="btn btn-outline" onclick="goHome()">← Patient Home</button>
+      </div>
+    </div>
+
+    <div class="wellness-grid" id="ayushSystemsStrip"></div>
+
+    <div class="tab-row" id="wellnessTabRow">
+      <div class="tab selected" onclick="selectWellnessTab(this, 0)">☀ Daily Wellness (Dinacharya)</div>
+      <div class="tab" onclick="selectWellnessTab(this, 1)">☾ Sleep &amp; Restful Rejuvenation (Nidra)</div>
+      <div class="tab" onclick="selectWellnessTab(this, 2)">🧘 Yoga &amp; Therapeutic Asanas</div>
+      <div class="tab" onclick="selectWellnessTab(this, 3)">🌬 Breathing Practices (Pranayama)</div>
+      <div class="tab" onclick="selectWellnessTab(this, 4)">🍽 Mindful Nutrition (Ahara)</div>
+    </div>
+
+    <div class="wellness-panel" id="wellnessPanel"></div>
+
+    <div class="card" id="ayushRoutineTracker" style="margin-top:22px;">
+      <div class="card-head">
+        <h3>🗹 Today's Dinacharya Tracker</h3>
+        <a href="#" onclick="resetAyushRoutine();return false;">Reset for Today</a>
+      </div>
+      <div class="progress-head">
+        <span id="ayushRoutineLabel">0 of 0 practices completed</span>
+        <span id="ayushRoutinePercent">0%</span>
+      </div>
+      <div class="progress-bar"><div class="progress-fill" id="ayushRoutineFill" style="width:0%;"></div></div>
+      <div id="ayushRoutineChecklist"></div>
+    </div>
+  </section>

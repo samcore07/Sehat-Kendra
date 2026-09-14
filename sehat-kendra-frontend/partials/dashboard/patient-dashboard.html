@@ -1,0 +1,102 @@
+<section class="screen screen--wide" id="screen-dashboard">
+    <div class="dash-topline">
+      <span class="badge-verified" id="dashAbhaLinked">ABHA Linked: 91-4421-8890-1204</span>
+      <span>National Health Mission</span>
+    </div>
+    <div class="dash-header">
+      <div>
+        <h1 id="dashPatientName">Welcome, Smt. Ananya Sen</h1>
+        <p class="muted">Unified Citizen Health Dashboard · Secure &amp; Consent Protected</p>
+      </div>
+      <div class="dash-header-actions">
+        <button class="btn btn-outline" onclick="speak('Here is an overview of your health dashboard')">🔊 Listen to Overview</button>
+        <button class="btn btn-outline" onclick="openProfile()">👤 Profile</button>
+      </div>
+    </div>
+
+    <div class="dash-grid-2">
+      <div class="card" id="dashHealthSummary">
+        <div class="card-head"><h3>⊙ Health Summary</h3><a href="#" onclick="openProfile();return false;">View Health Profile</a></div>
+      </div>
+      <div class="card">
+        <div class="card-head"><h3>🗓 Upcoming Consultation</h3></div>
+        <div id="dashUpcoming"></div>
+      </div>
+    </div>
+
+    <h3 class="section-title">Primary Health Actions</h3>
+    <div class="dash-grid-3">
+      <div class="action-card" onclick="showScreen('screen-book-1')">
+        <div class="action-icon">🗓</div>
+        <h4>Book Appointment</h4>
+        <p>Choose between General Medicine or Ayurveda pathways and select doctor slots.</p>
+        <button class="btn btn-primary btn-block">Book Appointment →</button>
+      </div>
+      <div class="action-card" onclick="openAyush()">
+        <div class="action-icon action-icon--green">🌿</div>
+        <h4>Ayurveda &amp; AYUSH</h4>
+        <p>Consult certified Vaidyas, explore Dinacharya routines, and traditional wellness.</p>
+        <button class="btn btn-outline btn-block">Explore AYUSH →</button>
+      </div>
+      <div class="action-card" onclick="openProfile()">
+        <div class="action-icon">📄</div>
+        <h4>Health Profile</h4>
+        <p>View your complete ABHA registration, demographics, and emergency contact.</p>
+        <button class="btn btn-outline btn-block">Open Profile ⊚</button>
+      </div>
+    </div>
+
+    <h3 class="section-title">Digital Prescription Center</h3>
+    <div class="rx-hero">
+      <div class="rx-hero-text">
+        <span class="eyebrow-pill">New · Rural &amp; Voice Friendly</span>
+        <h3>Scan, Speak, or Store Your Prescriptions Digitally</h3>
+        <p>Upload a photo of a paper prescription, or simply speak your symptoms aloud in your own language. SEHAT KENDRA drafts a structured digital prescription you can review, translate, summarise, and share with any doctor — no literacy or paperwork required.</p>
+      </div>
+      <div class="rx-hero-actions">
+        <button class="btn btn-primary" onclick="openPrescriptionCenter()">📋 Open Prescription Center →</button>
+      </div>
+    </div>
+
+    <div class="dash-grid-2">
+      <div class="card">
+        <div class="card-head"><h3>Health Record Management</h3></div>
+        <div class="list-row" onclick="startQuestionnaire()">
+          <div>
+            <strong>Medical History &amp; Questionnaire Answers</strong>
+            <p class="muted">Review past illnesses, surgeries, and family medical background</p>
+          </div>
+          <span>›</span>
+        </div>
+        <div class="list-row" onclick="openPrescriptionCenter()">
+          <div>
+            <strong>Current Medication Register</strong>
+            <p class="muted">Add or update active prescription drugs and frequencies</p>
+          </div>
+          <span>›</span>
+        </div>
+        <div class="list-row" onclick="openPrescriptionCenter()">
+          <div>
+            <strong>Digital Prescriptions</strong>
+            <p class="muted">Scan, speak, or review your saved digital prescriptions</p>
+          </div>
+          <span>›</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-head"><h3>Traditional Wellness &amp; Lifestyle</h3><a href="#" onclick="openAyush();return false;">View All</a></div>
+        <div class="list-row" onclick="openAyush()">
+          <div><strong>Dinacharya (Daily Routine)</strong><p class="muted">Morning hydration, sensory cleansing &amp; circadian rhythm</p></div>
+          <span>›</span>
+        </div>
+        <div class="list-row" onclick="openAyush()">
+          <div><strong>Yoga &amp; Asana Practices</strong><p class="muted">Gentle mobility postures for joint ease and spinal health</p></div>
+          <span>›</span>
+        </div>
+        <div class="list-row" onclick="openAyush()">
+          <div><strong>Pranayama (Breath Control)</strong><p class="muted">Alternate nostril breathing and stress downregulation</p></div>
+          <span>›</span>
+        </div>
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,36 @@
+<section class="screen screen--narrow" id="screen-doctor-modules">
+    <div class="panel">
+      <span class="eyebrow-pill">Healthcare Professional Workspace</span>
+      <div class="panel-head">
+        <h2>Welcome, Dr. Demo Clinician</h2>
+        <button class="icon-btn" onclick="speak('Choose a clinical module')">🔊 Listen</button>
+      </div>
+      <p class="panel-desc">Choose which part of the clinical workspace you would like to open.</p>
+
+      <div class="module-grid">
+        <div class="module-card" onclick="openDoctorPlaceholder('OPD Consultation Queue', '🗓')">
+          <div class="module-icon">🗓</div>
+          <h3>OPD Consultation Queue</h3>
+          <p>View today's scheduled patients, check-in status, and consultation order.</p>
+        </div>
+        <div class="module-card" onclick="openDoctorPlaceholder('Patient Records Search', '🔍')">
+          <div class="module-icon">🔍</div>
+          <h3>Patient Records Search</h3>
+          <p>Look up a patient's ABHA-linked health record with their consent.</p>
+        </div>
+        <div class="module-card" onclick="openDoctorPlaceholder('e-Prescription Desk', '💊')">
+          <div class="module-icon">💊</div>
+          <h3>e-Prescription Desk</h3>
+          <p>Issue and digitally sign prescriptions linked to the patient's health record.</p>
+        </div>
+        <div class="module-card" onclick="openDoctorPlaceholder('eSanjeevani Tele-Consultation', '💻')">
+          <div class="module-icon">💻</div>
+          <h3>eSanjeevani Tele-Consultation</h3>
+          <p>Start or join a scheduled video consultation with a registered patient.</p>
+        </div>
+      </div>
+      <div class="panel-actions panel-actions--single">
+        <button class="btn btn-outline" onclick="logout()">Logout</button>
+      </div>
+    </div>
+  </section>

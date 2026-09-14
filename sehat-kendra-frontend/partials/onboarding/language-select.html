@@ -1,0 +1,41 @@
+<section class="screen screen--narrow" id="screen-language">
+    <div class="panel">
+      <div class="panel-head">
+        <h2>Select Your Language</h2>
+        <button class="icon-btn" onclick="speak('Select your language')">🔊 Listen</button>
+      </div>
+      <p class="script-line">आपकी भाषा • আপনার ভাষা • உங்கள் மொழி • तुमची भाषा • ଆପଣଙ୍କ ଭାଷା</p>
+      <p class="panel-desc">Please choose the language in which you would like to use the SEHAT KENDRA portal.</p>
+      <div class="lang-grid">
+        <div class="lang-card selected" data-lang="English" onclick="selectLanguage(this)">
+          <div class="lang-name">English</div>
+          <div class="lang-native">English</div>
+          <span class="selected-pill">Selected</span>
+        </div>
+        <div class="lang-card" data-lang="Hindi" onclick="selectLanguage(this)">
+          <div class="lang-name">हिंदी</div>
+          <div class="lang-native">Hindi</div>
+        </div>
+        <div class="lang-card" data-lang="Bengali" onclick="selectLanguage(this)">
+          <div class="lang-name">বাংলা</div>
+          <div class="lang-native">Bengali</div>
+        </div>
+        <div class="lang-card" data-lang="Tamil" onclick="selectLanguage(this)">
+          <div class="lang-name">தமிழ்</div>
+          <div class="lang-native">Tamil</div>
+        </div>
+        <div class="lang-card" data-lang="Marathi" onclick="selectLanguage(this)">
+          <div class="lang-name">मराठी</div>
+          <div class="lang-native">Marathi</div>
+        </div>
+        <div class="lang-card" data-lang="Odia" onclick="selectLanguage(this)">
+          <div class="lang-name">ଓଡ଼ିଆ</div>
+          <div class="lang-native">Odia</div>
+        </div>
+      </div>
+      <div class="panel-actions">
+        <button class="btn btn-outline" onclick="showScreen('screen-landing')">← Back</button>
+        <button class="btn btn-primary" onclick="showScreen('screen-role')">Continue →</button>
+      </div>
+    </div>
+  </section>

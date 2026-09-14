@@ -1,0 +1,41 @@
+<section class="screen screen--narrow" id="screen-book-3">
+    <div class="panel">
+      <div class="panel-head">
+        <span class="eyebrow-pill">National OPD Appointment Scheduling</span>
+        <button class="icon-btn" onclick="speak('Choose consultation mode date and time')">🔊 Listen</button>
+      </div>
+      <h2 style="margin-top:0;">Book Doctor Consultation</h2>
+      <p class="panel-desc">Step 3 of 5: Consultation Mode, Date &amp; Time</p>
+
+      <div class="form-row">
+        <div class="field">
+          <label>Consultation Mode</label>
+          <select id="consultMode">
+            <option>In-Person Hospital OPD</option>
+            <option>eSanjeevani Tele-Consultation</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Consultation Date</label>
+          <select id="consultDate">
+  <option value="2026-09-09">Today (09 Sep 2026)</option>
+  <option value="2026-09-10" selected>Tomorrow (10 Sep 2026)</option>
+  <option value="2026-09-11">Day After (11 Sep 2026)</option>
+</select>
+        </div>
+      </div>
+
+      <label>Choose Available Time Slot</label>
+      <div class="slot-grid">
+        <div class="slot selected" onclick="selectSlot(this)">10:00 AM</div>
+        <div class="slot" onclick="selectSlot(this)">11:30 AM</div>
+        <div class="slot" onclick="selectSlot(this)">02:00 PM</div>
+        <div class="slot" onclick="selectSlot(this)">04:00 PM</div>
+      </div>
+
+      <div class="panel-actions">
+        <button class="btn btn-outline" onclick="goBackFromStep3()">← Back</button>
+        <button class="btn btn-primary" onclick="goToConsent()">Continue to Record Consent →</button>
+      </div>
+    </div>
+  </section>

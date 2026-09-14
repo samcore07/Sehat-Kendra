@@ -1,0 +1,14 @@
+<section class="screen screen--narrow" id="screen-mobile-otp">
+    <div class="panel">
+      <span class="eyebrow-pill">Mobile Authentication</span>
+      <div class="panel-head"><h2>Verify Mobile OTP</h2></div>
+      <p class="panel-desc">Enter the 6-digit demo OTP shown after requesting OTP.</p>
+      <div class="notice-box">ⓘ Demo only. No real SMS is sent.</div>
+      <div class="verify-box">
+        <label for="mobileOtpInput">Mobile OTP</label>
+        <input type="text" id="mobileOtpInput" inputmode="numeric" maxlength="6" placeholder="Enter 6-digit OTP" autocomplete="one-time-code">
+        <button type="button" class="btn btn-primary btn-block" onclick="verifyMobileOtp()">Verify Mobile →</button>
+        <button type="button" class="btn btn-outline btn-block" onclick="showScreen('screen-mobile-login')">← Change Mobile</button>
+      </div>
+    </div>
+  </section>

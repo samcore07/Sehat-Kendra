@@ -1,0 +1,24 @@
+<section class="screen screen--narrow" id="screen-book-consent">
+    <div class="panel">
+      <div class="panel-head">
+        <span class="eyebrow-pill">National OPD Appointment Scheduling</span>
+        <button class="icon-btn" onclick="speak('Review and confirm your appointment')">🔊 Listen</button>
+      </div>
+      <h2 style="margin-top:0;">Book Doctor Consultation</h2>
+      <p class="panel-desc">Step 4 of 5: Review &amp; Record-Sharing Consent</p>
+
+      <div class="summary-block-box" id="consentSummary"></div>
+
+      <div class="field" style="margin-top:18px;">
+        <label>Attach a saved digital prescription (optional)</label>
+        <select id="rxAttachSelect"></select>
+      </div>
+
+      <label class="check-row" style="margin-top:8px;"><input type="checkbox" id="bookingConsent"> I consent to sharing my digital health record, current medicines, and allergy history with the selected doctor for this consultation, under ABDM &amp; DISHA compliant consent protection.</label>
+
+      <div class="panel-actions">
+        <button class="btn btn-outline" onclick="showScreen('screen-book-3')">← Back</button>
+        <button class="btn btn-primary" onclick="confirmBooking()">Confirm Booking →</button>
+      </div>
+    </div>
+  </section>

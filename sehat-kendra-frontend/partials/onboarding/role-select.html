@@ -1,0 +1,26 @@
+<section class="screen screen--narrow" id="screen-role">
+    <div class="panel">
+      <div class="panel-head">
+        <h2>Select Your Role</h2>
+        <button class="icon-btn" onclick="speak('Select your role')">🔊 Listen</button>
+      </div>
+      <p class="panel-desc">Please identify how you would like to use SEHAT KENDRA today.</p>
+      <div class="role-grid">
+        <div class="role-card selected">
+          <div class="role-icon">👤</div>
+          <h3>Patient / Citizen</h3>
+          <p>Access your health records, register your digital health profile, and book consultations.</p>
+          <button class="btn btn-primary btn-block" onclick="showScreen('screen-auth')">Continue as Patient →</button>
+        </div>
+        <div class="role-card">
+          <div class="role-icon role-icon--teal">⚕</div>
+          <h3>Healthcare Professional / Doctor</h3>
+          <p>Access clinical workspaces, consultation queues, and patient health history.</p>
+          <button class="btn btn-outline btn-block" onclick="showScreen('screen-doctor-entry')">Access Doctor Portal →</button>
+        </div>
+      </div>
+      <div class="panel-actions panel-actions--single">
+        <button class="btn btn-outline" onclick="showScreen('screen-language')">← Back</button>
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,47 @@
+<section class="screen screen--narrow" id="screen-book-2-general">
+    <div class="panel">
+      <div class="panel-head">
+        <span class="eyebrow-pill">National OPD Appointment Scheduling</span>
+        <button class="icon-btn" onclick="speak('Select general medicine clinician')">🔊 Listen</button>
+      </div>
+      <div class="step-row">
+        <h2 style="margin:0;">Book Doctor Consultation</h2>
+        <a href="#" onclick="showScreen('screen-book-1');return false;">Change Pathway (General)</a>
+      </div>
+      <p class="panel-desc">Step 2 of 5: Choose General Medicine Clinician</p>
+
+      <div class="doctor-grid">
+        <div class="doctor-card selected" onclick="selectDoctor(this, 'Dr. Priya Sharma', 'General Medicine')">
+          <div class="doctor-avatar">PS</div>
+          <h4>Dr. Priya Sharma</h4>
+          <p class="muted">MBBS, MD (General Medicine)</p>
+          <p class="doctor-spec">General Medicine</p>
+          <p class="muted">Dr. Ram Manohar Lohia Hospital, New Delhi</p>
+          <p class="muted">★ 4.8 (312 reviews) · 12 Years Clinical Practice</p>
+          <button class="btn btn-primary">Selected</button>
+        </div>
+        <div class="doctor-card" onclick="selectDoctor(this, 'Dr. Debabrata Roy', 'Orthopaedics &amp; Joint Care')">
+          <div class="doctor-avatar">DR</div>
+          <h4>Dr. Debabrata Roy</h4>
+          <p class="muted">MBBS, MS (Orthopaedics), DNB</p>
+          <p class="doctor-spec">Orthopaedics &amp; Joint Care</p>
+          <p class="muted">District Hospital, North 24 Parganas, West Bengal</p>
+          <p class="muted">★ 4.6 (240 reviews) · 16 Years Clinical Practice</p>
+          <button class="btn btn-outline">Select</button>
+        </div>
+        <div class="doctor-card" onclick="selectDoctor(this, 'Dr. Sunita Deshmukh', 'Obstetrics &amp; Gynaecology')">
+          <div class="doctor-avatar">SD</div>
+          <h4>Dr. Sunita Deshmukh</h4>
+          <p class="muted">MBBS, MD (Obstetrics &amp; Gynaecology)</p>
+          <p class="doctor-spec">Obstetrics &amp; Gynaecology</p>
+          <p class="muted">AIIMS Comprehensive Health Centre</p>
+          <p class="muted">★ 4.9 (198 reviews) · 14 Years Clinical Practice</p>
+          <button class="btn btn-outline">Select</button>
+        </div>
+      </div>
+      <div class="panel-actions panel-actions--single">
+        <button class="btn btn-outline" onclick="showScreen('screen-book-1')">← Back</button>
+        <button class="btn btn-primary" onclick="showScreen('screen-book-3')">Continue to Mode &amp; Slot →</button>
+      </div>
+    </div>
+  </section>

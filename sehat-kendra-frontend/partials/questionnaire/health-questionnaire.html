@@ -1,0 +1,24 @@
+<section class="screen screen--narrow" id="screen-questionnaire">
+    <div class="notice-banner" style="margin-bottom:20px;">
+      <strong>STATUTORY NOTICE · सांविधिक सूचना</strong>
+      <p>This health history questionnaire aggregates records for consultation. It is NOT a medical diagnosis system.</p>
+    </div>
+    <div class="panel">
+      <div class="panel-head">
+        <span id="qSectionLabel" class="muted">Section 1 of 8</span>
+        <button class="icon-btn" onclick="speak('Health history questionnaire')">🔊 Listen</button>
+      </div>
+      <div class="progress-head">
+        <span id="qPercentLabel">13% Complete</span>
+      </div>
+      <div class="progress-bar"><div class="progress-fill" id="qProgressFill" style="width:13%;"></div></div>
+
+      <h3 id="qSectionTitle" style="margin:0 0 16px;">1. Basic Health Metrics</h3>
+      <div id="qSectionBody"></div>
+
+      <div class="panel-actions">
+        <button class="btn btn-outline" id="qBackBtn" onclick="questionnaireBack()">← Back</button>
+        <button class="btn btn-primary" id="qNextBtn" onclick="questionnaireNext()">Continue →</button>
+      </div>
+    </div>
+  </section>

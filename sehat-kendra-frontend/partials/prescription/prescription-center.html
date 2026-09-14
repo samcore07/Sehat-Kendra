@@ -1,0 +1,52 @@
+<section class="screen screen--wide" id="screen-prescription">
+    <div class="panel-head" style="margin-bottom:6px;">
+      <div>
+        <span class="eyebrow-pill">Digital Prescription Center</span>
+        <h2 style="margin:2px 0 0;">Scan, Speak &amp; Store Prescriptions</h2>
+      </div>
+      <button class="icon-btn" onclick="goHome()">← Patient Home</button>
+    </div>
+    <p class="panel-desc">Digitise a paper prescription in seconds, or describe your symptoms out loud in your own language — no reading or writing needed.</p>
+
+    <div class="notice-box">ⓘ This is a frontend prototype. Scanning and voice-drafting are simulated for demonstration and always require a doctor's review before any medicine is taken.</div>
+
+    <div class="rx-option-grid">
+      <!-- UPLOAD / SCAN -->
+      <div class="rx-option-card">
+        <h4>📷 Scan / Upload Prescription</h4>
+        <p>Take a photo of a paper prescription or upload an existing image. We'll digitise it into a structured, shareable record.</p>
+        <label class="rx-upload-zone" for="rxFileInput" id="rxUploadZone">
+          ⬆ Tap to choose a photo or file<br><span style="font-size:11.5px;">JPG, PNG or PDF</span>
+        </label>
+        <input type="file" id="rxFileInput" accept="image/*,application/pdf" class="hidden" onchange="handlePrescriptionUpload(event)">
+        <img id="rxPreviewThumb" class="rx-preview-thumb hidden">
+        <div class="rx-scan-status hidden" id="rxScanStatus"><span class="rx-spinner"></span> Scanning &amp; digitising prescription…</div>
+        <button class="btn btn-outline btn-block" onclick="document.getElementById('rxFileInput').click()">Choose File</button>
+      </div>
+
+      <!-- VOICE -->
+      <div class="rx-option-card">
+        <h4>🎙 Speak Your Symptoms</h4>
+        <p>Ideal for rural or low-literacy patients. Describe how you're feeling out loud — we'll transcribe it and draft a digital record.</p>
+        <div class="rx-lang-row">
+          <span>Speak in:</span>
+          <select id="rxVoiceLang" onchange="handleVoiceLanguageChange()">
+            <option value="en-IN">English</option>
+            <option value="hi-IN">हिंदी (Hindi)</option>
+            <option value="bn-IN">বাংলা (Bengali)</option>
+            <option value="mr-IN">मराठी (Marathi)</option>
+            <option value="ta-IN">தமிழ் (Tamil)</option>
+            <option value="or-IN">ଓଡ଼ିଆ (Odia)</option>
+          </select>
+        </div>
+        <button class="rx-voice-btn" id="rxVoiceBtn" onclick="toggleVoiceCapture()">🎙 Tap to Start Speaking</button>
+        <textarea id="rxTranscript" class="rx-transcript" placeholder="Your spoken symptoms will appear here — you can also type or edit directly."></textarea>
+        <button class="btn btn-primary btn-block" onclick="draftPrescriptionFromVoice(event)">Draft Digital Prescription →</button>
+      </div>
+    </div>
+
+    <h3 class="section-title">Your Saved Prescriptions</h3>
+    <div class="card">
+      <div id="rxSavedList" class="rx-list"></div>
+    </div>
+  </section>

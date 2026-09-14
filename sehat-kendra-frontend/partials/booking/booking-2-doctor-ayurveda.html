@@ -1,0 +1,47 @@
+<section class="screen screen--narrow" id="screen-book-2-ayurveda">
+    <div class="panel">
+      <div class="panel-head">
+        <span class="eyebrow-pill">National OPD Appointment Scheduling</span>
+        <button class="icon-btn" onclick="speak('Select Ayurveda specialist')">🔊 Listen</button>
+      </div>
+      <div class="step-row">
+        <h2 style="margin:0;">Book Doctor Consultation</h2>
+        <a href="#" onclick="showScreen('screen-book-1');return false;">Change Pathway (Ayurveda)</a>
+      </div>
+      <p class="panel-desc">Step 2 of 5: Choose Ayurveda Specialist / Vaidya</p>
+
+      <div class="doctor-grid">
+        <div class="doctor-card selected" onclick="selectDoctor(this, 'Vaidya Dr. Rajesh Sharma', 'Kayachikitsa (Internal Medicine &amp; Joint Care)')">
+          <div class="doctor-avatar">RS</div>
+          <h4>Vaidya Dr. Rajesh Sharma</h4>
+          <p class="muted">BAMS, MD (Ayurveda - Kayachikitsa)</p>
+          <p class="doctor-spec">Kayachikitsa (Internal Medicine &amp; Joint Care)</p>
+          <p class="muted">National Institute of Ayurveda (NIA), OPD Wing, Jaipur</p>
+          <p class="muted">★ 4.8 (294 reviews) · 18 Years Classical Practice</p>
+          <button class="btn btn-primary">Selected</button>
+        </div>
+        <div class="doctor-card" onclick="selectDoctor(this, 'Vaidya Smt. Arundhati Mukherjee', 'Rasayana, Digestion &amp; Ayush Wellness')">
+          <div class="doctor-avatar">AM</div>
+          <h4>Vaidya Smt. Arundhati Mukherjee</h4>
+          <p class="muted">BAMS, Fellowship in Rasayana &amp; Ayush Wellness</p>
+          <p class="doctor-spec">Rasayana, Digestion &amp; Ayush Wellness</p>
+          <p class="muted">All India Institute of Ayurveda (AIIA), New Delhi</p>
+          <p class="muted">★ 4.8 (215 reviews) · 15 Years Classical Practice</p>
+          <button class="btn btn-outline">Select</button>
+        </div>
+        <div class="doctor-card" onclick="selectDoctor(this, 'Vaidya K. Ramanathan', 'Herbal Medicine &amp; Metabolic Health')">
+          <div class="doctor-avatar">KR</div>
+          <h4>Vaidya K. Ramanathan</h4>
+          <p class="muted">BAMS, MD (Dravyaguna Vijnana)</p>
+          <p class="doctor-spec">Herbal Medicine &amp; Metabolic Health</p>
+          <p class="muted">Central Council for Research in Ayurvedic Sciences (CCRAS) Centre</p>
+          <p class="muted">★ 4.9 (340 reviews) · 20 Years Classical Practice</p>
+          <button class="btn btn-outline">Select</button>
+        </div>
+      </div>
+      <div class="panel-actions panel-actions--single">
+        <button class="btn btn-outline" onclick="showScreen('screen-book-1')">← Back</button>
+        <button class="btn btn-primary" onclick="showScreen('screen-book-3')">Continue to Mode &amp; Slot →</button>
+      </div>
+    </div>
+  </section>

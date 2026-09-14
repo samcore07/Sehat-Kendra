@@ -1,0 +1,20 @@
+<section class="screen screen--narrow" id="screen-aadhaar-login">
+    <div class="panel">
+      <span class="eyebrow-pill">Citizen Authentication</span>
+      <div class="panel-head">
+        <h2>Aadhaar Demographic Login</h2>
+        <button class="icon-btn" onclick="speak('Enter your 12-digit Aadhaar number')">🔊 Listen</button>
+      </div>
+      <p class="panel-desc">Enter your 12-digit Aadhaar number for demo verification.</p>
+      <div class="notice-box">ⓘ Demo only. No real Aadhaar authentication is performed. Use dummy data.</div>
+      <div class="verify-box">
+        <div class="verify-box-head">
+          <h3>Demo Aadhaar Verification</h3>
+          <a href="#" onclick="showScreen('screen-auth'); return false;">Change Method</a>
+        </div>
+        <label for="aadhaarLoginId">Aadhaar Number</label>
+        <input type="text" id="aadhaarLoginId" inputmode="numeric" maxlength="12" value="123456789012" placeholder="Enter 12-digit Aadhaar" autocomplete="off">
+        <button type="button" class="btn btn-primary btn-block" onclick="requestAadhaarLoginOtp()">Send Demo OTP ▶</button>
+      </div>
+    </div>
+  </section>

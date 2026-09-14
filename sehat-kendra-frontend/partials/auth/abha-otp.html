@@ -1,0 +1,16 @@
+<section class="screen screen--narrow" id="screen-abha-otp">
+    <div class="panel">
+      <span class="eyebrow-pill">ABHA Authentication</span>
+      <div class="panel-head">
+        <h2>Verify ABHA OTP</h2>
+      </div>
+      <p class="panel-desc">Enter the 6-digit demo OTP shown after requesting OTP.</p>
+      <div class="notice-box">ⓘ Demo only. No real OTP is sent.</div>
+      <div class="verify-box">
+        <label for="abhaOtpInput">ABHA OTP</label>
+        <input type="text" id="abhaOtpInput" inputmode="numeric" maxlength="6" placeholder="Enter 6-digit OTP" autocomplete="one-time-code">
+        <button type="button" class="btn btn-primary btn-block" onclick="verifyAbhaLogin()">Verify ABHA →</button>
+        <button type="button" class="btn btn-outline btn-block" onclick="showScreen('screen-abha-login')">← Change ABHA</button>
+      </div>
+    </div>
+  </section>

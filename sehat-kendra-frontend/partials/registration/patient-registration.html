@@ -1,0 +1,93 @@
+<section class="screen screen--narrow" id="screen-register">
+    <div class="panel stepper-panel">
+      <div class="panel-head">
+        <div>
+          <span class="step-pill" id="regStepLabel">Step 1 of 3: Identity Setup</span>
+        </div>
+        <button class="icon-btn" onclick="speak('New patient registration')">🔊 Listen</button>
+      </div>
+      <h2 style="margin-top:0;">New Patient Registration</h2>
+      <p class="panel-desc">Provide your basic demographic details to establish your health profile.</p>
+
+      <form id="regForm" onsubmit="return false;">
+        <!-- STEP 1 -->
+        <div class="reg-step active" id="regStep1">
+          <div class="field">
+            <label>Full Name *</label>
+            <input type="text" id="regName" placeholder="e.g. Smt. Ananya Sen">
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label>Date of Birth *</label>
+              <input type="date" id="regDob">
+            </div>
+            <div class="field">
+              <label>Gender *</label>
+              <select id="regGender"><option>Female</option><option>Male</option><option>Other</option><option>Prefer not to say</option></select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label>Mobile Number *</label>
+              <input type="text" id="regMobile" placeholder="10-digit mobile number">
+            </div>
+            <div class="field">
+              <label>Email Address (Optional)</label>
+              <input type="email" id="regEmail" placeholder="citizen@example.gov.in">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label>City / Town *</label>
+              <input type="text" id="regCity" placeholder="e.g. Barasat / Kolkata">
+            </div>
+            <div class="field">
+              <label>State / Union Territory</label>
+              <select id="regState"><option>West Bengal</option><option>Delhi</option><option>Maharashtra</option><option>Tamil Nadu</option><option>Odisha</option><option>Other</option></select>
+            </div>
+          </div>
+          <div class="panel-actions">
+            <button type="button" class="btn btn-outline" onclick="showScreen('screen-auth')">← Back</button>
+            <button type="button" class="btn btn-primary" onclick="regNext(1)">Continue →</button>
+          </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="reg-step" id="regStep2">
+          <div class="field">
+            <label>ABHA Number (Optional)</label>
+            <input type="text" id="regAbha" placeholder="Leave blank to create a new ABHA on registration">
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label>Emergency Contact Name</label>
+              <input type="text" id="regEmergencyName" placeholder="Full name">
+            </div>
+            <div class="field">
+              <label>Relationship</label>
+              <input type="text" id="regEmergencyRelation" placeholder="e.g. Spouse, Parent, Sibling">
+            </div>
+          </div>
+          <div class="field">
+            <label>Emergency Contact Phone</label>
+            <input type="text" id="regEmergencyPhone" placeholder="10-digit mobile number">
+          </div>
+          <div class="panel-actions">
+            <button type="button" class="btn btn-outline" onclick="regBack(2)">← Back</button>
+            <button type="button" class="btn btn-primary" onclick="goToRegStep(3)">Continue →</button>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="reg-step" id="regStep3">
+          <h3 class="section-title" style="margin-top:0;">Review Your Details</h3>
+          <div class="review-box" id="regReviewBox"></div>
+          <label class="check-row"><input type="checkbox" id="regConsent"> I consent to SEHAT KENDRA storing my details under ABDM &amp; DISHA compliant consent protection to establish my digital health record.</label>
+          <div class="panel-actions">
+            <button type="button" class="btn btn-outline" onclick="regBack(3)">← Back</button>
+            <button type="button" class="btn btn-primary" onclick="submitRegistration()">Register &amp; Proceed to Health Intake →</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>

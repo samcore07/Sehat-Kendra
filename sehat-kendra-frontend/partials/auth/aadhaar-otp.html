@@ -1,0 +1,16 @@
+<section class="screen screen--narrow" id="screen-aadhaar-otp">
+    <div class="panel">
+      <span class="eyebrow-pill">Aadhaar Authentication</span>
+      <div class="panel-head">
+        <h2>Verify Aadhaar OTP</h2>
+      </div>
+      <p class="panel-desc">Enter the 6-digit demo OTP shown after requesting OTP.</p>
+      <div class="notice-box">ⓘ Demo only. No real OTP is sent.</div>
+      <div class="verify-box">
+        <label for="aadhaarOtpInput">Aadhaar OTP</label>
+        <input type="text" id="aadhaarOtpInput" inputmode="numeric" maxlength="6" placeholder="Enter 6-digit OTP" autocomplete="one-time-code">
+        <button type="button" class="btn btn-primary btn-block" onclick="verifyAadhaarLogin()">Verify Aadhaar →</button>
+        <button type="button" class="btn btn-outline btn-block" onclick="showScreen('screen-aadhaar-login')">← Change Aadhaar</button>
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,20 @@
+<section class="screen screen--narrow" id="screen-abha-login">
+    <div class="panel">
+      <span class="eyebrow-pill">ABHA Authentication</span>
+      <div class="panel-head">
+        <h2>ABHA Health Account Login</h2>
+        <button class="icon-btn" onclick="speak('Enter your 14-digit ABHA number')">🔊 Listen</button>
+      </div>
+      <p class="panel-desc">Enter your 14-digit ABHA number to receive a demo OTP.</p>
+      <div class="notice-box">ⓘ Demo only. No real ABHA authentication is performed.</div>
+      <div class="verify-box">
+        <div class="verify-box-head">
+          <h3>Demo ABHA Verification</h3>
+          <a href="#" onclick="showScreen('screen-auth'); return false;">Change Method</a>
+        </div>
+        <label for="abhaLoginId">ABHA Number</label>
+        <input type="text" id="abhaLoginId" inputmode="numeric" maxlength="14" value="91442188901204" placeholder="Enter 14-digit ABHA number" autocomplete="off">
+        <button type="button" class="btn btn-primary btn-block" onclick="requestAbhaOtp()">Send ABHA OTP ▶</button>
+      </div>
+    </div>
+  </section>

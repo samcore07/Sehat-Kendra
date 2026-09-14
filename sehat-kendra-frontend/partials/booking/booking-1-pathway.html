@@ -1,0 +1,39 @@
+<section class="screen screen--narrow" id="screen-book-1">
+    <div class="panel">
+      <div class="panel-head">
+        <span class="eyebrow-pill">National OPD Appointment Scheduling</span>
+        <button class="icon-btn" onclick="speak('Book doctor consultation')">🔊 Listen</button>
+      </div>
+      <h2 style="margin-top:0;">Book Doctor Consultation</h2>
+      <p class="panel-desc">Step 1 of 5: Choose Treatment Pathway — SEHAT KENDRA supports both Allopathic General Medicine and traditional AYUSH healthcare systems. Both options adhere to National Health Mission public standards.</p>
+
+      <div class="pathway-grid">
+        <div class="pathway-card selected" onclick="selectPathway('general', this)">
+          <div class="pathway-icon">⊞</div>
+          <h4>1. General Medicine (Allopathy)</h4>
+          <p>Consult healthcare practitioners practicing conventional modern medicine. Ideal for diagnostic lab reviews, acute symptoms, prescription management, and hospital referrals.</p>
+          <button
+  class="btn btn-primary btn-block"
+  onclick="event.stopPropagation(); state.booking.pathway='general'; goToDoctorStep();"
+>
+  Select General Medicine →
+</button>
+        </div>
+        <div class="pathway-card" onclick="selectPathway('ayurveda', this)">
+          <div class="pathway-icon pathway-icon--teal">🌿</div>
+          <h4>2. Ayurveda / AYUSH Healthcare</h4>
+          <p>Consult qualified Vaidyas in classical Ayurvedic medicine, chronic joint care (Sandhivata), lifestyle guidance (Dinacharya), and traditional Rasayana rejuvenation.</p>
+          <button
+  class="btn btn-outline btn-block"
+  onclick="event.stopPropagation(); state.booking.pathway='ayurveda'; goToDoctorStep();"
+>
+  Select Ayurveda / AYUSH →
+</button>
+        </div>
+      </div>
+      <div class="panel-actions panel-actions--single">
+        <button class="btn btn-outline" onclick="goHome()">Cancel</button>
+        <button class="btn btn-primary" onclick="goToDoctorStep()">Continue to Choose Doctor →</button>
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,95 @@
+<section class="screen screen--narrow" id="screen-auth">
+    <div class="panel">
+      <span class="eyebrow-pill">Citizen Authentication</span>
+      <div class="panel-head">
+        <h2>Patient Access &amp; Identity</h2>
+        <button class="icon-btn" onclick="speak('Patient access and identity')">🔊 Listen</button>
+      </div>
+      <p class="panel-desc">Choose how you would like to proceed into SEHAT KENDRA.</p>
+      <div class="notice-box">ⓘ This is a frontend prototype. No ral government ID or sensitive data is collected.</div>
+
+      <div class="auth-grid">
+
+  <!-- ABHA -->
+  <div class="auth-card" onclick="showScreen('screen-abha-login')">
+    <div class="auth-icon">🪪</div>
+    <h4>Ayushman Bharat Health Account (ABHA)</h4>
+    <p>Authenticate with your 14-digit ABHA ID.</p>
+    <button
+      type="button"
+      class="btn btn-primary btn-block"
+      onclick="event.stopPropagation(); showScreen('screen-abha-login')"
+    >
+      Verify ABHA
+    </button>
+  </div>
+
+
+  <!-- AADHAAR -->
+  <div class="auth-card" onclick="showScreen('screen-aadhaar-login')">
+    <div class="auth-icon">👁</div>
+    <h4>Aadhaar Demographic (Mock)</h4>
+    <p>Verify using your 12-digit Aadhaar number and OTP.</p>
+    <button
+      type="button"
+      class="btn btn-outline btn-block"
+      onclick="event.stopPropagation(); showScreen('screen-aadhaar-login')"
+    >
+      Verify Aadhaar
+    </button>
+  </div>
+
+
+  <!-- MOBILE -->
+  <div class="auth-card" onclick="showScreen('screen-mobile-login')">
+    <div class="auth-icon">📱</div>
+    <h4>Mobile Number OTP</h4>
+    <p>Receive a 6-digit mock OTP on your registered phone.</p>
+    <button
+      type="button"
+      class="btn btn-outline btn-block"
+      onclick="event.stopPropagation(); showScreen('screen-mobile-login')"
+    >
+      Mobile OTP
+    </button>
+  </div>
+
+
+  <!-- SAMPLE PATIENT -->
+  <div class="auth-card" onclick="loginAsSamplePatient()">
+    <div class="auth-icon">🙋</div>
+    <h4>Sample Patient Login</h4>
+    <p>Quickly demo the portal using a pre-configured mock patient.</p>
+    <button
+      type="button"
+      class="btn btn-outline btn-block"
+      onclick="event.stopPropagation(); loginAsSamplePatient()"
+    >
+      Use Demo Citizen
+    </button>
+  </div>
+
+
+  <!-- NEW PATIENT -->
+  <div
+    class="auth-card auth-card--highlight"
+    onclick="showScreen('screen-register')"
+  >
+    <div class="auth-icon">➕</div>
+    <h4>New Patient Registration</h4>
+    <p>Create a new personal digital health record profile.</p>
+    <button
+      type="button"
+      class="btn btn-primary btn-block"
+      onclick="event.stopPropagation(); showScreen('screen-register')"
+    >
+      Register Now
+    </button>
+  </div>
+
+</div>
+      <div class="panel-actions panel-actions--single">
+        <button class="btn btn-outline" onclick="showScreen('screen-role')">← Back</button>
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,23 @@
+<section class="screen screen--narrow" id="screen-profile">
+    <div class="panel">
+      <div class="panel-head">
+        <h2 style="margin:0;">Health Profile</h2>
+        <button class="icon-btn" onclick="goHome()">← Patient Home</button>
+      </div>
+      <div class="profile-id-card">
+        <div class="profile-avatar">👤</div>
+        <div>
+          <div class="profile-id-name" id="profileName">Smt. Ananya Sen<span class="pill-verified">ABHA Verified</span></div>
+          <div class="muted">National Health Mission · Digital Health ID</div>
+        </div>
+      </div>
+      <div class="profile-grid">
+        <div class="profile-field"><div class="summary-label">ABHA / HEALTH NUMBER</div><div class="value" id="profileAbha"></div></div>
+        <div class="profile-field"><div class="summary-label">EXISTING CONDITIONS</div><div class="value" id="profileConditions"></div></div>
+        <div class="profile-field"><div class="summary-label">CURRENT MEDICINES</div><div class="value" id="profileMedicines"></div></div>
+        <div class="profile-field"><div class="summary-label">KNOWN ALLERGIES</div><div class="value" id="profileAllergies"></div></div>
+        <div class="profile-field" style="grid-column:1 / -1;"><div class="summary-label">EMERGENCY CONTACT</div><div class="value" id="profileEmergency"></div></div>
+      </div>
+      <button class="btn btn-outline btn-block" style="margin-top:20px;" onclick="startQuestionnaire()">↻ Update Medical History</button>
+    </div>
+  </section>
